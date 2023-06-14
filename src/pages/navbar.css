@@ -1,0 +1,92 @@
+.sidebar {
+  display: flex;
+  /* width: 12rem; */
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 9rem;
+  visibility: visible;
+  left: -200px; /* Initial position off-screen */
+  transition: left 0.3s ease; /* Add transition animation */
+}
+
+.sidebar.open {
+  left: 0; /* Move the sidebar to the visible position */
+}
+
+h3 {
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: rgba(192, 192, 198, 0.445);
+  padding: 0.6rem;
+  top: 0;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-top: 4rem;
+  border-radius: 4px;
+  width: 150px;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.sidebar-menu li a:hover {
+  opacity: 0.8;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  visibility: hidden;
+  background-color: white;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width:994px) {
+    .sidebar{
+  width: 9rem;
+  /* background-color: black; */
+  /* visibility: hidden;   */
+  /* margin-top: 2rem; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  z-index: 999;
+    }
+    .sidebar-toggle{
+      margin-top: -1rem;
+      visibility: visible;
+    }
+    
+    h3{
+      width: 6rem;
+      margin-left: 1rem;
+      margin-top: 2rem;
+    }
+}
+
+/* Adjust other styles as needed */
